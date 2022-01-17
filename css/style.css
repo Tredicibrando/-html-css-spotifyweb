@@ -46,6 +46,8 @@ header{
     align-items: center;
     max-width: 100%;
     gap: 20px;
+    padding: 5px;
+    overflow: hidden;
 }
 
 .toolbar .toolbar__wrapper .toolbar__item{
@@ -123,34 +125,53 @@ header{
     align-items: center;
     gap: 25px;
     width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
 
-.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row_wrapper{
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row_wrapper,
+.toolbar__item .toolbar__item__wrapper .timebar__row_wrapper{
     width: 100%;
     flex-grow: 1;
-    
 }
 
-.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row{
-    position: relative;
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2,
+.toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row__2 {
+    position: absolute;
+    z-index: 99999;
     border-radius: 999px;
-    width: 100%;
-    opacity: 50%;
+    width: 15%;
     background-color: white;
+    height: 5px;
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row,
+.toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row{
+    position: relative;
+    border-radius: 999px; 
+    width: 100%;
+    background-color: #5a5a5a;
     height: 5px;
     z-index: 1;
 }
 
-.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2{
-    position: absolute;
-    z-index: 2;
-    border-radius: 999px;
-    width: 50px;
-    background-color: white;
-    height: 5px;
-    display: inline-block;
+.toolbar__item .toolbar__item__wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 5px;
 }
+
+
+
+.toolbar__item .toolbar__item__wrapper li i{
+    padding-right: 5px;
+}
+
+
+
+
 
  
 
