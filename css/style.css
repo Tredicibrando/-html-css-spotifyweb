@@ -177,23 +177,7 @@ header{
     padding-right: 10px;
 }
 
-
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
+/* Aside section */
 main{
     width: 100%;
     background-color:  #141922;
@@ -204,6 +188,10 @@ main{
 aside{
     min-width: 250px;
     background-color: black;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #main__container{
@@ -212,3 +200,15 @@ aside{
 }
 
 
+.sidebar aside picture{
+    height: 75px;
+    overflow: hidden;
+    padding: 15px;
+}
+
+
+.sidebar aside picture img{
+    max-width: 100%;
+    object-fit: contain;
+    object-position: center;
+}
