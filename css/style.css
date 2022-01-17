@@ -26,9 +26,9 @@ ul{
 
 .debug-01{
     border: 1px solid rgb(114, 55, 252);
-    padding: 20px;
 }
 
+/* Layout rules */
 
 body{
     display: flex;
@@ -38,7 +38,6 @@ body{
 
 header{
     background-color: #282828;
-    padding: 5px;
 }
 
 .toolbar .toolbar__wrapper{
@@ -46,24 +45,110 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    gap: 20px;
 }
 
 .toolbar .toolbar__wrapper .toolbar__item{
     width: 250px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
 } 
 
 
-.toolbar .toolbar__wrapper .toolbar__item picture{
+.toolbar__wrapper .toolbar__item .toolbar_img_wrapper{
     max-width: 75px;
 }
 
-.toolbar .toolbar__wrapper .toolbar__item picture img{
+.toolbar__wrapper .toolbar__item .toolbar_img_wrapper picture{
+  overflow: hidden;
+}
+
+
+.toolbar__wrapper .toolbar__item .toolbar_img_wrapper img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    overflow: hidden;
 }
+
+.toolbar__wrapper .toolbar__item .toolbar__text__wrapper {
+    margin-right: 20px;
+}
+
+.toolbar__wrapper .toolbar__item .toolbar__text__wrapper h5{
+    font-size: 16px;
+}
+
+.toolbar__wrapper .toolbar__item .toolbar__text__wrapper p{
+    font-size: 12px;
+}
+
+.toolbar__wrapper .toolbar__item .toolbar__icon__wrapper i{
+    padding: 5px;
+}
+
+.toolbar__wrapper .timebar{
+    /* padding: 10px 5px; */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.toolbar__wrapper .timebar .timebar__player_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.toolbar__wrapper .timebar .timebar__player_wrapper i{
+    font-size: 20px;
+}
+
+.toolbar__wrapper .timebar .timebar__player_wrapper li:nth-child(3) i{
+    font-size: 30px;
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+
+}
+
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .row--white{
+    border-radius: 999px;
+    width: 50px;
+    background-color: white;
+    height: 5px;
+    z-index: 5;
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row{
+    border-radius: 999px;
+    width: 250px;
+    opacity: 50%;
+    background-color: white;
+    height: 5px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -76,7 +161,7 @@ main{
 }
 
 aside{
-    width: 250px;
+    min-width: 250px;
     background-color: black;
 }
 
