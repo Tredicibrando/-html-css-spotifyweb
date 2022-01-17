@@ -44,7 +44,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
+    max-width: 100%;
     gap: 20px;
 }
 
@@ -53,13 +53,14 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 5px;
-    flex-shrink: 1;
+    flex-shrink: 0;
 } 
 
 
 .toolbar__wrapper .toolbar__item .toolbar_img_wrapper{
     max-width: 75px;
+    width: 75px;
+    padding-right: 10px;
 }
 
 .toolbar__wrapper .toolbar__item .toolbar_img_wrapper picture{
@@ -96,8 +97,8 @@ header{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     gap: 10px;
+    flex-wrap: nowrap;
 }
 
 .toolbar__wrapper .timebar .timebar__player_wrapper{
@@ -105,6 +106,7 @@ header{
     justify-content: center;
     align-items: center;
     gap: 25px;
+    padding: 0 25px;
 }
 
 .toolbar__wrapper .timebar .timebar__player_wrapper i{
@@ -117,31 +119,40 @@ header{
 
 .toolbar__wrapper .timebar .timebar__timeline__wrapper{
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     gap: 25px;
     width: 100%;
-
 }
 
 
-.toolbar__wrapper .timebar .timebar__timeline__wrapper .row--white{
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row_wrapper{
+    width: 100%;
+    flex-grow: 1;
+    
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row{
+    position: relative;
+    border-radius: 999px;
+    width: 100%;
+    opacity: 50%;
+    background-color: white;
+    height: 5px;
+    z-index: 1;
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2{
+    position: absolute;
+    z-index: 2;
     border-radius: 999px;
     width: 50px;
     background-color: white;
     height: 5px;
-    z-index: 5;
+    display: inline-block;
 }
 
-.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row{
-    border-radius: 999px;
-    width: 250px;
-    opacity: 50%;
-    background-color: white;
-    height: 5px;
-}
-
-
+ 
 
 
 
