@@ -224,6 +224,7 @@ aside{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    justify-content: space-between;
 }
 
 .sidebar nav ul li {
@@ -232,11 +233,27 @@ aside{
     gap: 5px;
     position: relative;
     white-space: nowrap;
-    /* justify-content: space-between; */
+    width: 100%;
+}
+
+.sidebar nav ul li a{
+    width: 100%;
+}
+
+.sidebar__cta__wrapper li{
+    width: 100%;
+}
+
+.sidebar__cta__wrapper .sidebar_text_wrapper{
+    width: 20%;
 }
 
 .sidebar .sidebar__cta__wrapper{
     padding: 10px 0;
+}
+
+.sidebar .sidebar__cta__wrapper a{
+    width: 100%;
 }
 
 .sidebar nav ul li i {
@@ -255,6 +272,8 @@ aside{
     gap: 5px;
     position: relative;
 }
+
+
 
 .sidebar nav ul li .sidebar_item_wrapper:hover{
     opacity: 100%;
@@ -276,30 +295,45 @@ aside .playlist__wrapper{
     padding: 10px 0;
 }
 
-aside .playlist__wrapper li{
-    padding-left: 10px;
+aside .playlist__wrapper li a{
+    padding: 5px 0;
     opacity: 80%;
     cursor: pointer;
+    font-size: 14px;
 }
 
+aside .playlist__wrapper li a:hover{
+    opacity: 100%;
+    transition: 100ms ease-in-out;
+}
 aside .playlist__wrapper li:hover{
     opacity: 100%;
     transition: 100ms ease-in-out;
 }
 
-aside .playlist__wrapper li h5{
+aside .playlist__wrapper h5{
     font-size: 16px;
+    opacity: 100%;
     text-transform: uppercase;
 }
 
 .playlist__wrapper .icon__wrapper{
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .playlist__wrapper .icon__wrapper i{
-    padding-left: 0;
     font-size: 30px;
+    
+}
+
+aside .playlist__wrapper .playlist_item {
+    padding-left: 10px;
+    
+}
+
+aside .playlist_download{
     
 }
 
