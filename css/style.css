@@ -9,7 +9,12 @@
 html{
     font-size: 16px;
     color: white;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: currentColor;
 }
 
 img{
@@ -200,15 +205,107 @@ aside{
 }
 
 
-.sidebar aside picture{
-    height: 75px;
+.sidebar .sidebar_img_wrapper{
+    height: 50px;
     overflow: hidden;
-    padding: 15px;
+    margin: 10px 0;
 }
 
 
 .sidebar aside picture img{
-    max-width: 100%;
+    width: 100%;
+    height: 100%;
     object-fit: contain;
-    object-position: center;
+    object-position: left;
+    padding: 5px;
 }
+
+.sidebar nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+    white-space: nowrap;
+    /* justify-content: space-between; */
+}
+
+.sidebar .sidebar__cta__wrapper{
+    padding: 10px 0;
+}
+
+.sidebar nav ul li i {
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    padding-right: 5px;
+    padding-left: 10px;
+}
+
+.sidebar nav ul li .sidebar_item_wrapper{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    opacity: 80%;
+    gap: 5px;
+    position: relative;
+}
+
+.sidebar nav ul li .sidebar_item_wrapper:hover{
+    opacity: 100%;
+    transition: 100ms ease-in-out;
+}
+
+
+.trattino_sidebar:hover{
+    display: visible;
+    position: absolute;
+    height: 100%;
+    width: 3px;
+    left: -10;
+    background-color: #adff2f;
+}
+
+
+aside .playlist__wrapper{
+    padding: 10px 0;
+}
+
+aside .playlist__wrapper li{
+    padding-left: 10px;
+    opacity: 80%;
+    cursor: pointer;
+}
+
+aside .playlist__wrapper li:hover{
+    opacity: 100%;
+    transition: 100ms ease-in-out;
+}
+
+aside .playlist__wrapper li h5{
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.playlist__wrapper .icon__wrapper{
+    display: flex;
+    align-items: center;
+}
+
+.playlist__wrapper .icon__wrapper i{
+    padding-left: 0;
+    font-size: 25px;
+}
+
+
+
+
+
+
+
+
