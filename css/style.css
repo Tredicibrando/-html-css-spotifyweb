@@ -498,6 +498,12 @@ aside .playlist__wrapper .playlist_item {
 
 }
 
+.content_section .card_container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 .content_section .card{
     width: 170px;
     display: flex;
