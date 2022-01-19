@@ -502,6 +502,7 @@ aside .playlist__wrapper .playlist_item {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+    gap: 25px;
 }
 
 .content_section .card{
@@ -510,17 +511,47 @@ aside .playlist__wrapper .playlist_item {
     flex-direction: column;
     gap: 15px;
     align-items: center;
+    cursor: pointer;
 }
 
 .content_section .card .card_img_wrapper{
     width: 100%;
-
+    height: 100%;
+    position: relative;
 }
 
 .content_section .card .card_img_wrapper img{
     width: 100%;
     object-fit: cover;
     object-position: center;
+}
+
+.content_section .card .overlay{
+    display: hidden;
+}
+
+.content_section .card  i{ 
+    display: none;
+}
+
+.content_section .card .card_img_wrapper .overlay:active{
+        display: visible;
+        background-color: rgba(0, 0, 0, 0.7);
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 168px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+}
+
+.content_section .card .card_img_wrapper .overlay:hover i{
+    display: visible;
+}
+
+.content_section .card .card_img_wrapper .overlay i{
+    font-size: 30px;
 }
 
 .card_text_wrapper{
