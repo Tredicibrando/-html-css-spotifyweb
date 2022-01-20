@@ -63,6 +63,14 @@ header{
     flex-shrink: 0;
 } 
 
+.toolbar i{
+    cursor: pointer;
+}
+
+.toolbar i:active{
+   transform: scale(95%);
+}
+
 
 .toolbar__wrapper .toolbar__item .toolbar_img_wrapper{
     max-width: 75px;
@@ -555,6 +563,7 @@ aside .playlist__wrapper .playlist_item {
     flex-direction: row;
     gap: 1%;
     padding: 20px 0;
+    flex-wrap: wrap;
 }
 
 .content_section .card{
@@ -564,6 +573,7 @@ aside .playlist__wrapper .playlist_item {
     gap: 15px;
     align-items: center;
     position: relative;
+    padding: 10px 0;
 }
 
 .content_section .card .card_img_wrapper{
@@ -649,6 +659,8 @@ aside .playlist__wrapper .playlist_item {
 
 .card_text_wrapper{
     text-align: center;
+    overflow: hidden;
+    width: 100%;
 }
 
 .card_text_wrapper h5{
@@ -667,6 +679,43 @@ aside .playlist__wrapper .playlist_item {
     overflow: hidden;
 }
 
+@media screen and (max-width: 878px) {
+    .content_section .card_container{
+        gap: 2%;
+    }
+    
+    .content_section .card{
+        width: calc(94% / 4);
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .content_section .card_container{
+        gap: 2%;
+    }
+    
+    .content_section .card{
+        width: calc(98% / 2);
+        gap: 15px;
+    }
+}
+
+@media screen and (max-width: 552px) {
+    .content_section .card_container{
+        gap: 2%;
+    }
+    
+    .content_section .card{
+        width: calc(98% / 2);
+        gap: 15px;
+    }
+
+    aside{
+        width: auto;
+
+
+}
 
 
 
