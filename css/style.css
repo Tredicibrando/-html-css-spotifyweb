@@ -148,12 +148,43 @@ header{
 .toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2,
 .toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row__2 {
     position: absolute;
-    z-index: 99999;
+    /* z-index: 99999; */
     border-radius: 999px;
     width: 15%;
     background-color: white;
     height: 5px;
+    z-index: 55;
+    cursor: pointer;
 }
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2:hover,
+.toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row__2:hover {
+    background-color: #adff2f;
+}
+
+.toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row .timebar__row__2:hover::after,
+.toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row__2:hover::after {
+    visibility: visible;
+}
+
+.pallino::after{
+    display: block;
+    content: '';
+    width: 10px;
+    height: 10px;
+    background-color: white;
+    border-radius: 999px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 100%;
+    box-shadow: 0 8px 8px -4px rgba(0, 0, 0, 0.9);
+    visibility: hidden;
+}
+
+
+
+
 
 .toolbar__wrapper .timebar .timebar__timeline__wrapper .timebar__row,
 .toolbar__item .toolbar__item__wrapper .timebar__row_wrapper .timebar__row{
@@ -195,6 +226,7 @@ aside{
     height: 100%;
     flex-shrink: 0;
     z-index: 45;
+    overflow: hidden;
 }
 
 #main__container{
@@ -207,7 +239,6 @@ aside{
 
 .sidebar .sidebar_img_wrapper{
     height: 50px;
-    overflow: hidden;
     margin: 10px 0;
 }
 
@@ -224,19 +255,19 @@ nav{
     gap: 50px;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .sidebar nav ul{
     display: flex;
     flex-direction: column;
     gap: 10px;
-    justify-content: space-between;
 }
 
 .sidebar .navbar_side{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    height: 100%;
     gap: 10px;
 }
 
@@ -307,6 +338,7 @@ nav{
 .playlist__wrapper{
     padding: 10px 0;
     flex-grow: 1;
+    overflow-y: auto;
 }
 
 aside .playlist__wrapper li a{
@@ -348,7 +380,7 @@ aside .playlist__wrapper .playlist_item {
 }
 
 .playlist_download_wrapper {
-    /* padding-top: 50px; */
+    padding-bottom: 10px;
 }
 
 .playlist_download_wrapper .download_img_wrapper{
@@ -480,7 +512,6 @@ aside .playlist__wrapper .playlist_item {
 
 
 .main__content .navigation .navigation__wrapper li{
-    display: block;
     text-transform: uppercase;
     white-space: nowrap;
     cursor: pointer;
@@ -488,6 +519,19 @@ aside .playlist__wrapper .playlist_item {
     color: #5a5a5a;
     position: relative;
 }
+
+.main__content .navigation .navigation__wrapper li:hover::after{
+    display: block;
+    content: '';
+    height: 2px;
+    width: 35px;
+    background-color: #adff2f;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 
 
 .main__content .navigation .navigation__wrapper li a:hover{
@@ -503,7 +547,6 @@ aside .playlist__wrapper .playlist_item {
 .content_section p{
     font-size: 16px;
     color: #adadad;
-    padding-bottom: 15px;
     white-space: nowrap;
 }
 
@@ -511,6 +554,7 @@ aside .playlist__wrapper .playlist_item {
     display: flex;
     flex-direction: row;
     gap: 1%;
+    padding: 20px 0;
 }
 
 .content_section .card{
@@ -552,7 +596,22 @@ aside .playlist__wrapper .playlist_item {
     overflow: hidden;
 }
 
-.content_section .card .card_img_wrapper::after:hover {
+.content_section .card .rounded::after{
+    display: block;
+    content: '';
+    position: absolute;
+    background-color: black;
+    opacity: 0;
+    transition: opacity 0.5 ease-in-out;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    overflow: hidden;
+    border-radius: 999px;
+}
+
+.content_section .card .card_img_wrapper.round::after:hover {
     overflow: hidden;
 }
 
